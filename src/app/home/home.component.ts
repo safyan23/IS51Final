@@ -8,9 +8,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) { }
+  total = {};
 
   ngOnInit() {
-
+    // This will gather the things from calculation function
+    this.total = JSON.parse(localStorage.getItem('calculation'));
   }
 
 }
